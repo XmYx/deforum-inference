@@ -39,6 +39,7 @@ class DeforumDiffusion:
             image, init = self.pipe(
                 prompt=prompt, width=width, height=height, image=init, strength=strength
             )
+            init = image
             strength = 0.55
             image.save(os.path.join(self.sample_dir, self.sample_format.format(iframe+1)))
 
